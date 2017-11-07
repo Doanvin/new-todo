@@ -1,0 +1,35 @@
+// 1. Import Taffy Variables
+@import "./taffy/components/var";
+
+
+// 2. Set your own custom variables
+$red: #aa3939;
+$blue: #266;
+$green: #2d882d;
+
+
+// 3. Set the derived variables
+$color-primary: $red;
+$color-secondary: $green;
+
+
+// 4. Import the rest of Taffy
+
+// CONTAINER
+@import "./taffy/components/container";
+
+// GRID
+@import "./taffy/components/grid-basic";
+@import "./taffy/components/grid-children-layout";
+@import "./taffy/components/grid-column-count-layout";
+@import "./taffy/components/grid-offset";
+
+// TYPOGRAPHY
+@import "./taffy/components/typography";
+
+// BASIC ELEMENT STYLES
+@import "./taffy/components/styles-buttons";
+@import "./taffy/components/styles-forms";
+@import "./taffy/components/styles-tables";
+@import "./taffy/components/styles-media";
+@import "./taffy/components/styles-helpers";

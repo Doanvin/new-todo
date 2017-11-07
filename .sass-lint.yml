@@ -75,7 +75,7 @@ rules:
   empty-args: 1
   hex-length: 1
   hex-notation:
-    - 1
+    - 0
     - style: lowercase
   indentation: 1
   leading-zero: 0

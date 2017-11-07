@@ -1,0 +1,53 @@
+$material-heading-shadow: 0 0 4px rgba(0, 0, 0, .2);
+$material-card-shadow: 0 1px 2px 2px rgba(0, 0, 0, .2);
+
+$bg-main: lighten($blue, 15);
+
+@mixin material-heading {
+  box-shadow: $material-heading-shadow;
+}
+
+@mixin material-card {
+  position: relative;
+  border-radius: 2px;
+  box-shadow: $material-card-shadow;
+  overflow: hidden;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-main;
+}
+
+.add-list--wrap {
+  @include material-heading;
+  // margin-top: $gap;
+  background-color: $color-primary;
+}
+
+.main-wrap {
+  background-color: $bg-main;
+}
+
+.nav-list {
+  &__heading {
+    padding-left: .25rem;
+  }
+}
+
+.card {
+  @include material-card;
+  // padding: 0 .75rem .75rem;
+
+  &--left {
+    height: 100%;
+    // padding: 0 .75rem .75rem 0;
+    background-color: darken(#fff, 0);
+  }
+
+  &--right {
+    // padding: 0 0 .75rem .75rem;
+    background-color: darken(#fff, 0);
+  }
+}
