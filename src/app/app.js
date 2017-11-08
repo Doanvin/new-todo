@@ -24,7 +24,7 @@ export class HeaderComponent {
     addList() {
         const inputs = getInputs(this.btn.id);
         this.list = new List(inputs[0].value, inputs[1].value);
-        console.log(`List: ${this.list}`);
+        console.log(`List: ${this.list}`); // eslint-disable-line no-console
         localStorage.setItem(this.key, JSON.stringify(this.list));
     }
 
@@ -39,7 +39,7 @@ export class NavListComponent {
         // Listen for updates to notes from other windows.
         window.addEventListener('storage', ev => {
             this.list = JSON.parse(localStorage.getItem(ev.key));
-            console.log(`Updated list: ${ev.key} from ${ev.oldValue} to ${ev.newValue}`);
+            console.log(`Updated list: ${ev.key} from ${ev.oldValue} to ${ev.newValue}`); // eslint-disable-line no-console
         });
     }
 }
