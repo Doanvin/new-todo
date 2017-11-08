@@ -51,7 +51,7 @@ export class AllListsComponent {
         '';
 
         const storage = new Observable();
-        storage.subscribe(this.getList);
+        storage.subscribe(this.updateList);
     }
 
     updateList(ev) {
@@ -61,7 +61,6 @@ export class AllListsComponent {
     }
 
     getLists() {
-      for (let i = 0; i < )
     }
 }
 
@@ -112,8 +111,8 @@ export class TasksComponent {
 }
 
 class AppComponent {
-    constructor(selector) {
-        this.element = document.getElementById(selector);
+    constructor(id) {
+        this.element = document.getElementById(id);
         this.declarations = [
             AddListComponent,
             NavListComponent,

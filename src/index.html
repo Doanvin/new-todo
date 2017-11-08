@@ -11,7 +11,7 @@
   <script src="./js/app.min.js" charset="utf-8"></script>
 </head>
 <body>
-  <header id="add-list-component" class="add-list--wrap">
+  <header id="add-list-component" class="add-list-wrap">
     <div class="container">
       <div class="add-list grid">
 
@@ -64,7 +64,8 @@
           </div>
 
 
-          <div id="tasks-component" class="grid card card--bottom">
+          <ul id="tasks-component" class="tasks grid card card--bottom">
+            <li class="tasks__task">
             <div class="grid__col is-2--small is-1 vertically-center justify--flex-start">
               <i class="fa fa-sort"></i>&nbsp;&nbsp;
               <input type="checkbox">
@@ -79,7 +80,8 @@
               <i class="fa fa-pencil"></i>&emsp;
               <i class="fa fa-trash"></i>
             </div>
-          </div>
+            </li>
+          </ul>
 
 
         </main>
