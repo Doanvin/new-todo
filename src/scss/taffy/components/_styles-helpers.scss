@@ -1,4 +1,4 @@
-/*******************************HELPERS*******************************/
+// HELPERS
 
 .text-center {
   text-align: center !important;
@@ -41,9 +41,9 @@
 }
 
 .vertically-center {
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .float-left {
@@ -59,7 +59,7 @@
 }
 
 .no-padding {
-  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .block {
@@ -83,15 +83,15 @@
 }
 
 .screen-reader {
-  border: 0;
-  clip: rect(1px,1px,1px,1px);
-  clip-path: inset( 50% );
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
   position: absolute;
   width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
   word-wrap: normal;
 }
 
@@ -100,7 +100,7 @@
 }
 
 
-@media (max-width : 600px) {
+@media (max-width: 600px) {
   .content-buffer {
     padding: 20px 3%;
   }
@@ -110,6 +110,7 @@
   &--flex-start {
     justify-content: flex-start !important;
   }
+
   &--flex-end {
     justify-content: flex-end !important;
   }

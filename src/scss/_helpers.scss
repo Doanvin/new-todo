@@ -72,6 +72,14 @@ body {
   }
 }
 
+.btn {
+  @include heading-font;
+}
+
+.input-text {
+  @include content-font;
+}
+
 .todo-list {
   @include content-font;
 }
