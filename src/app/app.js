@@ -10,7 +10,7 @@ export class List {
     }
 }
 
-export class HeaderComponent {
+export class AddListComponent {
     constructor(id) {
         this.element = document.getElementById(id);
         this.button = document.getElementById('create-list');
@@ -49,6 +49,19 @@ export class AllListsComponent {
         this.element = document.getElementById(id);
         this.template =
         '';
+
+        const storage = new Observable();
+        storage.subscribe(this.getList);
+    }
+
+    updateList(ev) {
+        this.list = JSON.parse(localStorage.getItem(ev.key));
+        console.log(`Updated list: ${ev.key} from ${ev.oldValue} to ${ev.newValue}`); // eslint-disable-line no-console
+
+    }
+
+    getLists() {
+      for (let i = 0; i < )
     }
 }
 
@@ -89,28 +102,28 @@ export class TasksComponent {
         '';
     }
 
+    getTasks() {
+
+    }
+
     divToInput() {
 
     }
 }
 
-const declarations = [
-    AppComponent,
-    HeaderComponent,
-    NavListComponent,
-    AllListsComponent,
-    TodoListComponent,
-    AddTaskComponent,
-    TasksComponent
-];
-
-for (let i = 0; i < declarations.length; i++) {
-    new declarations[i]();
-}
-
 class AppComponent {
     constructor(selector) {
         this.element = document.getElementById(selector);
+        this.declarations = [
+            AddListComponent,
+            NavListComponent,
+            TodoListComponent
+        ];
+        this.init = () => {
+            for (let i = 0; i < this.declarations.length; i++) {
+                new this.declarations[i]();
+            }
+        };
         this.template =
         '';
 
