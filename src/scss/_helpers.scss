@@ -1,10 +1,11 @@
-$material-heading-shadow: 0 0 4px rgba(0, 0, 0, .5);
+$material-heading-shadow: 0 3px 2px rgba(0, 0, 0, .3);
 $material-card-shadow: 2px 3px 2px 2px rgba(0, 0, 0, .2);
 $material-card-background-color: darken($white, 0);
 
 $bg-main: lighten($blue, 15);
 
 @mixin material-heading {
+  margin-bottom: 4px;
   box-shadow: $material-heading-shadow;
 }
 
@@ -24,7 +25,6 @@ body {
 
 .add-list-wrap {
   @include material-heading;
-  margin-bottom: 4px;
   background-color: $color-primary;
 }
 
@@ -39,13 +39,14 @@ body {
 
   &__heading {
     @include heading-font;
-    padding-left: .25rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid lighten($black, 20);
+    text-align: center;
   }
 }
 
 .card {
   @include material-card;
-  // padding: 0 .75rem .75rem;
 
   &--left {
     border-right: 0;
@@ -63,6 +64,7 @@ body {
     border-bottom: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    box-shadow: 2px 0 2px 2px rgba(0, 0, 0, .2);
   }
 
   &--bottom {
@@ -82,4 +84,13 @@ body {
 
 .todo-list {
   @include content-font;
+}
+
+.fa {
+  &-pencil,
+  &-sort,
+  &-plus,
+  &-minus {
+    padding-right: .75rem;
+  }
 }

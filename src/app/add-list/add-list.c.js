@@ -1,12 +1,11 @@
+import {List} from '/shared/list.m';
 import {getInputs} from 'utils';
-import{Observable} from 'observable';
+import {Observable} from 'observable';
 
 export class AddListComponent {
     constructor(id) {
         this.element = document.getElementById(id);
         this.button = document.getElementById('create-list');
-        this.template =
-        '';
 
         const btnClick = new Observable();
         btnClick.subscribe(this.addList());
